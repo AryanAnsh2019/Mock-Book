@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+*{
+	margin:0;
+	padding: 0;
+	font-family: 'Ubuntu', sans-serif;
+}
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: url(sand.jpg);
+	background-size: cover;
+}
+body::after{
+	content: '';
+	height: 100vh;
+	width: 100%;
+	position: absolute;
+	top:0;
+	left:0;
+	background-color: rgb(255, 255, 255);
+	mix-blend-mode: color;
+}
+.book{
+	z-index: 2;
+	position: relative;
+	top: 0;
+	width: 350px;
+	height:550px;
+	background: #fff;
+	transform: rotate(-37.5deg) skewX(10deg);
+	box-shadow: -35px 35px 50px rgba(0,0,0,1);
+	transition: 0.5s;
+}
+.book:hover{
+	transform: rotate(-37.5deg) skewX(10deg) translate(20px,-20px);
+	box-shadow: -50px 50px 100px rgba(0,0,0,1);
+}
+.book::before{
+	content:'';
+	width:30px;
+	height:100%;
+	background: url(bg.jpg);
+	background-size:cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: skewY(-45deg) translate(-30px,-15px);
+	box-shadow: inset -10px 0 20px rgba(0,0,0,0.2);
+}
+.book::after{
+	content:'';
+	width:100%;
+	height:30px;
+	background: #ccc;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	transform: skewX(-45deg) translate(15px,30px);
+}
+.book h2{
+	position: absolute;
+	bottom:70px;
+	left: 20px;
+	font-size: 3.3em;
+	line-height: 1em;
+	color: #fff;
+}
+.book h2 span{
+	background: url(bg.jpg);
+	background-attachment: fixed;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size:cover;
+}
+.book .writer{
+	position: absolute;
+	bottom:20px;
+	right:20px;
+	color: #262626;
+	font-size: 0.6em;
+	padding-top: 5px;
+	font-weight: 500;
+	border-top: 1px solid #262626;
+}
+.cover{
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:78%;
+	background: url(bg.jpg);
+	background-size: cover;
+}
